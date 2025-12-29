@@ -1,0 +1,790 @@
+1
+Pride and Prejudice
+Jane Austen
+1813
+1
+2
+Onyx Storm
+Rebecca Yarros
+2025
+7
+1
+To Kill a Mockingbird
+Harper Lee
+1960
+1
+4
+The Great Gatsby
+F. Scott Fitzgerald
+1925
+1
+5
+Laut Bercerita
+Leila S. Chudori
+2002
+1
+6
+The Catcher in the Rye
+J.D. Salinger
+1951
+1
+7
+The Book Thief
+Markus Zusak
+2005
+1
+8
+The Hobbit
+J.R.R. Tolkien
+1937
+1
+9
+Jane Eyre
+Charlotte Brontë
+1847
+1
+10
+Atomic Habits
+James Clear
+2018
+1
+11
+Brave New World
+Aldous Huxley
+1932
+1
+12
+Rectoverso
+Dee Lestari
+2008
+1
+13
+The Alchemist
+Paulo Coelho
+1988
+1
+14
+Anna Karenina
+Leo Tolstoy
+1877
+1
+15
+Crime and Punishment
+Fyodor Dostoevsky
+1866
+1
+16
+The Kite Runner
+Khaled Hosseini
+2003
+1
+17
+Dua Garis Biru
+Ika Natassa
+2015
+1
+18
+Wuthering Heights
+Emily Brontë
+1847
+1
+19
+Little Women
+Louisa May Alcott
+1868
+1
+20
+The Da Vinci Code
+Dan Brown
+2003
+1
+21
+Laskar Pelangi
+Andrea Hirata
+2005
+1
+22
+Sang Pemimpi
+Andrea Hirata
+2006
+1
+23
+Edensor
+Andrea Hirata
+2007
+1
+24
+Maryamah Karpov
+Andrea Hirata
+2012
+1
+25
+Ayat-Ayat Cinta
+Habiburrahman El Shirazy
+2004
+1
+26
+Ketika Cinta Bertasbih
+Habiburrahman El Shirazy
+2005
+1
+27
+Dilan: Dia adalah Dilanku Tahun 1990
+Pidi Baiq
+2014
+1
+28
+Milea: Suara dari Dilan
+Pidi Baiq
+2015
+1
+29
+5 cm
+Donny Dhirgantoro
+2005
+1
+30
+Perahu Kertas
+Dee Lestari
+2002
+1
+31
+Rectoverso
+Dee Lestari
+2008
+1
+32
+Supernova: Ksatria, Puteri, dan Bintang Jatuh
+Dee Lestari
+2001
+1
+33
+Madre
+Tere Liye
+2010
+1
+34
+Bumi
+Tere Liye
+2012
+1
+35
+Pulang
+Tere Liye
+2017
+1
+36
+Rindu
+Tere Liye
+2010
+1
+37
+Hafalan Shalat Delisa
+Tere Liye
+2009
+1
+38
+Perempuan-Perempuan Hebat
+Clara Ng
+2013
+1
+39
+Good Morning, Love
+Boy Candra
+2016
+1
+40
+Catatan Juang
+Boy Candra
+2018
+1
+41
+Critical Eleven
+Ika Natassa
+2013
+1
+42
+Antologi Rasa
+Ika Natassa
+2011
+1
+43
+Fairy Tale
+Dee Lestari
+2015
+1
+44
+Supernova: Akar
+Dee Lestari
+2012
+1
+45
+Supernova: Petir
+Dee Lestari
+2014
+1
+46
+Hujan
+Tere Liye
+2013
+1
+47
+Pulau
+Tere Liye
+2014
+1
+48
+Matahari
+Tere Liye
+2016
+1
+49
+Bulan
+Tere Liye
+2019
+1
+50
+My Stupid Boss
+Chaos@work
+2012
+1
+51
+My Stupid Boss 2
+Chaos@work
+2015
+1
+52
+Sebuah Seni untuk Bersikap Bodo Amat
+Mark Manson
+2017
+1
+53
+Ikigai: The Japanese Secret
+Hector Garcia & Francesc Miralles
+2016
+1
+54
+9 Summers 10 Autumns
+Iwan Setyawan
+2013
+1
+55
+The Fault in Our Stars
+John Green
+2012
+1
+56
+Paper Towns
+John Green
+2008
+1
+57
+Looking for Alaska
+John Green
+2005
+1
+58
+Everything, Everything
+Nicola Yoon
+2015
+1
+59
+The Sun Is Also a Star
+Nicola Yoon
+2016
+1
+60
+Eleanor & Park
+Rainbow Rowell
+2013
+1
+61
+The Girl on the Train
+Paula Hawkins
+2015
+1
+62
+Gone Girl
+Gillian Flynn
+2012
+1
+63
+Me Before You
+Jojo Moyes
+2012
+1
+64
+Gone Girl
+Gillian Flynn
+2012
+1
+65
+Sunrise on the Reaping
+Suzanne Collins
+2025
+1
+66
+Gerbang Dialog Danur
+Risa Saraswati
+2014
+1
+67
+Asih
+Risa Saraswati
+2015
+1
+68
+Ivanna
+Risa Saraswati
+2018
+1
+69
+Sebelum Iblis Menjemput
+Ayu Utami
+2018
+1
+70
+Kisah Tanah Jawa
+Mada Zidan & Bonaventura
+2018
+0
+71
+KKN di Desa Penari
+SimpleMan
+2019
+1
+72
+Sewu Dino
+SimpleMan
+2019
+1
+73
+Tumbal
+Fajar Nugros
+2018
+1
+74
+Pabrik Gula
+SimpleMan
+2020
+1
+75
+Jagat Lelembut
+Tiarma Effendi
+2016
+1
+76
+Rumah Kentang
+Arya Aksara
+2017
+1
+77
+Malam Jumat Kliwon
+Satrio Pamungkas
+2015
+1
+78
+Jeritan Malam
+Achi TM
+2014
+1
+79
+Kisah Nyata Alam Gaib
+Eko Triono
+2012
+1
+80
+Teror di Gunung Merapi
+Andi Yudha
+2016
+1
+81
+Horor Hotel Angker
+Dian Purnomo
+2019
+1
+82
+Misteri Rumah Darah
+Reza Andika
+2020
+1
+83
+Penunggu Hutan Larangan
+Rizky R.
+2021
+1
+84
+Ritual Malam Satu Suro
+Dimas Pratama
+2022
+1
+85
+Ranjang Mayat
+Ruwi Meita
+2013
+1
+86
+Keramat
+Ruwi Meita
+2014
+1
+87
+13 Hantu Jakarta
+Ruwi Meita
+2012
+1
+88
+Cantik Itu Luka
+Eka Kurniawan
+2002
+1
+89
+Filosofi Kopi
+Dee Lestari
+2006
+1
+90
+Merinding
+Risa Saraswati
+2016
+1
+91
+Senjakala
+Ragiel JP
+2017
+1
+92
+Teror Rumah Susun
+Elly Risman
+2015
+1
+93
+Misteri Gunung Kawi
+Bayu Pratama
+2016
+1
+94
+Penunggu Pohon Beringin
+Feri Susanto
+2018
+1
+95
+Arwah Gentayangan
+Nisa Rahma
+2014
+1
+96
+Kutukan Tanah Jawa
+Ardiansyah
+2019
+1
+97
+Kuburan Tua
+Achi TM
+2013
+1
+98
+Tumbal Pesugihan
+Ruwi Meita
+2015
+1
+99
+Ritual Sesajen
+Dimas Prasetyo
+2021
+1
+100
+Teror Rumah Kosong
+Fajar Nugros
+2017
+1
+101
+Misteri Sumur Tua
+Wahyu Hidayat
+2018
+1
+102
+Malam Keramat
+Naufal Zaky
+2016
+1
+103
+Kutukan Tujuh Turunan
+Rizal Maulana
+2020
+1
+104
+Lorong Sunyi
+Intan Puspita
+2022
+1
+105
+Rumah Tanpa Pintu
+Aldi Prakoso
+2021
+1
+106
+Bisikan Tengah Malam
+Sinta Ayu
+2019
+1
+107
+Hantu Jeruk Purut
+Rangga Mahendra
+2015
+1
+108
+Teror Malam Jumat
+Ilham Fikri
+2016
+1
+109
+Penghuni Loteng
+Ananda Putri
+2020
+0
+110
+Makam Terlarang
+Yoga Saputra
+2018
+1
+111
+Reka Adegan
+S. Mara Gd
+2018
+1
+112
+Pembunuhan di Kota Hujan
+Andi Gunawan
+2020
+1
+113
+Jejak Terakhir
+Ario Muhammad
+2019
+1
+114
+Kasus di Balik Tirai
+Nadia El-Farisi
+2021
+1
+115
+Misteri Apartemen Merah
+Dimas Rifaldi
+2022
+1
+116
+Detektif Sekolah
+Alvi Syahrin
+2017
+1
+117
+Jam Mati
+Rendra Saputra
+2020
+1
+118
+Saksi yang Hilang
+Fajar Nugroho
+2021
+1
+119
+Kode Hitam
+Raka Pradipta
+2023
+1
+120
+Jejak Darah di Senja Hari
+Bima Sakti
+2019
+1
+121
+Negeri 5 Menara
+Ahmad Fuadi
+2009
+1
+122
+Ranah 3 Warna
+Ahmad Fuadi
+2011
+1
+123
+Rantau 1 Muara
+Ahmad Fuadi
+2013
+1
+124
+Bidadari-Bidadari Surga
+Tere Liye
+2008
+1
+125
+Pukat
+Tere Liye
+2010
+1
+126
+Tentang Kamu
+Tere Liye
+2016
+1
+127
+Sunset Bersama Rosie
+Tere Liye
+2011
+1
+128
+Orang-Orang Biasa
+Andrea Hirata
+2019
+1
+129
+Sabtu Bersama Bapak
+Adhitya Mulya
+2014
+1
+130
+Aroma Karsa
+Dee Lestari
+2018
+1
+131
+Galaksi
+Poppi Pertiwi
+2017
+1
+132
+Dear Nathan
+Erisca Febriani
+2016
+1
+133
+Mariposa
+Luluk HF
+2018
+1
+134
+Ayah
+Andrea Hirata
+2015
+1
+135
+The Historian's Craft
+Marc Bloch
+1949
+1
+136
+The Use and Abuse of History
+Marc Ferro
+1981
+1
+137
+Lies My Teacher Told Me
+James W. Loewen
+1995
+1
+138
+The Practice of History
+Geoffrey Elton
+1967
+1
+139
+Harry Potter and the Sorcerer's Stone
+J.K. Rowling
+1997
+1
+140
+Harry Potter and the Chamber of Secrets
+J.K. Rowling
+1998
+1
+141
+Harry Potter and the Prisoner of Azkaban
+J.K. Rowling
+1999
+1
+142
+The Hobbit
+J.R.R. Tolkien
+1937
+1
+143
+The Lord of the Rings: The Fellowship of the Ring
+J.R.R. Tolkien
+1954
+1
+144
+The Lord of the Rings: The Two Towers
+J.R.R. Tolkien
+1954
+1
+145
+The Lord of the Rings: The Return of the King
+J.R.R. Tolkien
+1955
+1
+146
+Game of Thrones
+George R.R. Martin
+1996
+1
+147
+A Clash of Kings
+George R.R. Martin
+1998
+1
+148
+A Storm of Swords
+George R.R. Martin
+2000
+1
+149
+The Name of the Wind
+Patrick Rothfuss
+2007
+0
+150
+The Wise Mans Fear
+Patrick Rothfuss
+2011
+0
+151
+Mistborn: The Final Empire
+Brandon Sanderson
+2006
+0
+152
+Mistborn: The Well of Ascension
+Brandon Sanderson
+2007
+0
+153
+Mistborn: The Hero of Ages
+Brandon Sanderson
+2008
+0
+154
+Percy Jackson & the Olympians: The Lightning Thief
+Rick Riordan
+2005
+0
+155
+Percy Jackson & the Olympians: Sea of Monsters
+Rick Riordan
+2006
+0
+156
+Percy Jackson & the Olympians: The Titan's Curse
+Rick Riordan
+2007
+0
+157
+Mermaid Man
+Darling
+2009
+0
+158
+Koko
+Cucu
+2025
+0
