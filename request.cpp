@@ -32,15 +32,18 @@ void insertLastRequest(ListRequest &L, addressRequest P) {
     }
 }
 
-void tambahRequest(ListRequest &LRQ) {
+void tambahRequest(ListRequest &LRQ, ListBuku &L) {
     infoRequest rq;
     int ketik;
+    string x;
     rq.idRequest = generateIdRequest(LRQ);
     cout << "Masukkan Nama Pengaju: ";
     cin.ignore();
     getline(cin, rq.namaRequest);
-    cout << "Masukkan ID Buku: ";
-    cin >> rq.idBuku;
+    cout << "Masukkan Judul Buku: ";
+    getline(cin, x);
+    addressBuku p = findBukuByNama(L, x);
+    rq.idBuku = p->info.idBuku;
     setWaktuRequest(rq);
     setTanggalRequest(rq);
     addressRequest baru = alokasiRequest(rq);

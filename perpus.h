@@ -81,6 +81,7 @@ void searchbyAuthor(ListBuku L, string author);
 void updateBook(ListBuku &L, int idBuku);
 int generateIdBuku(ListBuku LB);
 addressBuku findBukuById(ListBuku L, int idBuku);
+addressBuku findBukuByNama(ListBuku L, string judulBuku);
 
 
 /* ================= DAFTAR PEMINJAM ================= */
@@ -153,7 +154,7 @@ struct ListRequest {
 void CreateListRequest(ListRequest &L);
 addressRequest alokasiRequest(infoRequest x);
 void insertLastRequest(ListRequest &L, addressRequest P);
-void tambahRequest(ListRequest &LRQ);
+void tambahRequest(ListRequest &LRQ, ListBuku &L);
 int generateIdRequest(ListRequest LRQ);
 void printInfoRequest(ListRequest L);
 addressRequest findRequestById(ListRequest L, int id);

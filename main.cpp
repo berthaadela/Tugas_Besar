@@ -284,7 +284,7 @@ int main() {
                             break;
                         }
                         case 4: {
-                            tambahRequest(LRQ);
+                            tambahRequest(LRQ, LB);
                             break;
                         }
                         case 5: {

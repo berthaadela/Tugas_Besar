@@ -224,3 +224,14 @@ addressBuku findBukuById(ListBuku L, int idBuku) {
     }
     return Nil;
 }
+
+addressBuku findBukuByNama(ListBuku L, string judulBuku) {
+    addressBuku P = L.first;
+    while (P != Nil) {
+        if (P->info.namaBuku == judulBuku) {
+            return P;
+        }
+        P = P->next;
+    }
+    return Nil;
+}
