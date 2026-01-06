@@ -29,7 +29,7 @@ void insertLastPengunjung(ListPengunjung &L, addressPengunjung P) {
     }
 }
 
-void tambahPengunjung(ListPengunjung LP, bool statusPerpustakaan) {
+void tambahPengunjung(ListPengunjung &LP, bool statusPerpustakaan) {
     infoPengunjung pg;
     if (!statusPerpustakaan) {
         cout << "Perpustakaan masih tutup" << endl;
@@ -42,6 +42,7 @@ void tambahPengunjung(ListPengunjung LP, bool statusPerpustakaan) {
         insertLastPengunjung(LP, alokasiPengunjung(pg));
         cout << "Pengunjung berhasil ditambahkan!" << endl;
         simpanPengunjungKeFile(LP, "daftarpengunjung.txt");
+
     }
 }
 
@@ -94,6 +95,7 @@ void resetListPengunjung(ListPengunjung &L) {
     L.last = Nil;
 
     cout << "List pengunjung telah di-reset." << endl;
+    simpanPengunjungKeFile(L, "daftarpengunjung.txt");
 }
 
 void hapusPengunjungById(ListPengunjung &L, int idPengunjung) {
@@ -103,35 +105,46 @@ void hapusPengunjungById(ListPengunjung &L, int idPengunjung) {
         P = P->next;
     }
 
-    if (P == Nil) return;
+    if (P == Nil) {
+        cout << "Pengunjung dengan ID tersebut tidak ditemukan." << endl;
+        return;
+    }
+
     if (P == L.first && P == L.last) {
         L.first = Nil;
         L.last = Nil;
-    } else if (P == L.first) {
+    } 
+    else if (P == L.first) {
         L.first = P->next;
         L.first->prev = Nil;
-    } else if (P == L.last) {
+    } 
+    else if (P == L.last) {
         L.last = P->prev;
         L.last->next = Nil;
-    } else {
+    } 
+    else {
         P->prev->next = P->next;
         P->next->prev = P->prev;
     }
+
     delete P;
+    cout << "Pengunjung berhasil dihapus." << endl;
+
+    simpanPengunjungKeFile(L, "daftarpengunjung.txt");
 }
 
-int generateIdPengunjung(ListPengunjung LP) {
-    if (LP.first == NULL) {
-        return 1;
-    } else {
-        addressPengunjung p = LP.first;
-        while (p->next != NULL) {
-            p = p->next;
+
+int generateIdPengunjung(ListPengunjung LPG) {
+    int maxId = 0;
+    addressPengunjung p = LPG.first;
+    while (p != Nil) {
+        if (p->info.idPengunjung > maxId) {
+            maxId = p->info.idPengunjung;
         }
-        return p->info.idPengunjung+1;
+        p = p->next;
     }
+    return maxId + 1;
 }
-
 void setWaktuKunjungan(infoPengunjung &pg) {
     time_t now = time(0);
     tm *ltm = localtime(&now);

@@ -131,17 +131,9 @@ void hapusPeminjamById(ListPeminjam &L, ListBuku &LB, int idPeminjam) {
         return;
     }
     addressBuku bk = findBukuById(LB, P->info.idBuku);
-    cout << "diluar if";
-    cout << bk;
-    cout << "bk info tersedia" << endl;
-    cout << bk->info.tersedia << endl;
     
     if (bk != Nil) {
-        cout << "didalam if" << endl;
-        cout << bk << endl;
-        cout << bk->info.tersedia << endl;
         bk->info.tersedia = bk->info.tersedia+1;
-        cout << bk->info.tersedia << endl;
     }
     if (P == L.first && P == L.last) {
         L.first = Nil;

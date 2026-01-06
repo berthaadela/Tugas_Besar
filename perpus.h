@@ -37,7 +37,7 @@ struct ListPengunjung {
 void CreateListPengunjung(ListPengunjung &L);
 addressPengunjung alokasiPengunjung(infoPengunjung x);
 void insertLastPengunjung(ListPengunjung &L, addressPengunjung P);
-void tambahPengunjung(ListPengunjung LP, bool statusPerpustakaan);
+void tambahPengunjung(ListPengunjung &LP, bool statusPerpustakaan);
 int hitungJumlahPengunjung(ListPengunjung L);
 void printListPengunjung(ListPengunjung L);
 void resetListPengunjung(ListPengunjung &L);
