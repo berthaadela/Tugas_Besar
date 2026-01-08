@@ -89,7 +89,13 @@ void hapusBukuById(ListBuku &L, int idBuku) {
     while (P != Nil && P->info.idBuku != idBuku) {
         P = P->next;
     }
-    if (P == Nil) return;
+    if (P == Nil) {
+        cout << "Buku dengan id " << idBuku << " tidak tersedia..." << endl;
+        return;
+    }
+
+    addressBuku after = P->next;
+
     if (P == L.first && P == L.last) {
         L.first = Nil;
         L.last = Nil;
@@ -103,8 +109,14 @@ void hapusBukuById(ListBuku &L, int idBuku) {
         P->prev->next = P->next;
         P->next->prev = P->prev;
     }
-
     delete P;
+    P = after;
+    while (P != Nil) {
+        P->info.idBuku -= 1;
+        P = P->next;
+    }
+    cout << "Buku berhasil dihapus!" << endl;
+    simpanBukuKeFile(L, "daftarbuku.txt");
 }
 
 void searchbyTitle(ListBuku L, string title) {
@@ -166,40 +178,70 @@ void searchbyAuthor(ListBuku L, string author) {
             return;
         }
     }
-    cout << "Buku tidak ditemukan." << endl;
 }
 
 void updateBook(ListBuku &L, int idBuku) {
     addressBuku P = L.first;
+    int input;
 
     while (P != Nil) {
         if (P->info.idBuku == idBuku) {
-            cout << "Masukkan judul baru: ";
-            getline(cin >> ws, P->info.namaBuku);
-            cout << "Masukkan penulis baru: ";
-            getline(cin >> ws, P->info.namaPenulis);
-            cout << "Masukkan tahun terbit baru: ";
-            getline(cin >> ws, P->info.tahunTerbit);
-            cout << "Tersedia: ";
-            cin >> P->info.tersedia;
-            return;
+            do {
+                cout << "1. Edit Judul"
+                << endl << "2. Edit Penulis"
+                << endl << "3. Edit Tahun Terbit"
+                << endl << "4. Edit Ketersediaan"
+                << endl << "0. Kembali"
+                << endl << "Pilihan: ";
+                cin >> input;
+                cout << endl;
+                switch (input) {
+                    case 1: {
+                        cout << "Masukkan judul baru: ";
+                        getline(cin >> ws, P->info.namaBuku);
+                        simpanBukuKeFile(L, "daftarbuku.txt");
+                        break;
+                    }
+                    case 2: {
+                        cout << "Masukkan penulis baru: ";
+                        getline(cin >> ws, P->info.namaPenulis);
+                        simpanBukuKeFile(L, "daftarbuku.txt");
+                        break;
+                    }
+                    case 3: {
+                        cout << "Masukkan tahun terbit baru: ";
+                        getline(cin >> ws, P->info.tahunTerbit);
+                        simpanBukuKeFile(L, "daftarbuku.txt");
+                        break;
+                    }
+                    case 4: {
+                        cout << "Tersedia: ";
+                        cin >> P->info.tersedia;
+                        simpanBukuKeFile(L, "daftarbuku.txt");
+                        break;
+                    }
+                }
+                cout << endl;
+            } while (input != 0);
         }
         P = P->next;
     }
     cout << "Buku tidak ditemukan." << endl;
+    
 }
 
 int generateIdBuku(ListBuku LB) {
-    if (LB.first == NULL) {
-        return 1;
-    } else {
-        addressBuku p = LB.first;
-        while (p->next != NULL) {
-            p = p->next;
+    int maxId = 0;
+    addressBuku p = LB.first;
+    while (p != Nil) {
+        if (p->info.idBuku > maxId) {
+            maxId = p->info.idBuku;
         }
-        return p->info.idBuku+1;
+        p = p->next;
     }
+    return maxId + 1;
 }
+
 
 void resetListBuku(ListBuku &L) {
     addressBuku P = L.first;

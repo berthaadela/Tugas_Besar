@@ -11,7 +11,7 @@ int main() {
     ListRequest LRQ;
     bool statusPerpustakaan = loadStatusPerpustakaan("status.txt");
     bool passwordAcc = false;
-    int pilihan0, pilihan1, pilihan2, pilihan3, pilihan4, idb, idp;
+    int pilihan0, pilihan1, pilihan2, pilihan3, pilihan4, pilihan5, idb, idp;
     int pilihanP1, pilihanP2;
     string jud, pen, inputPassword;
 
@@ -53,7 +53,8 @@ int main() {
                             }
                             cout << "2. Kelola Daftar Buku" << endl;
                             cout << "3. Kelola Log Pengunjung" << endl;
-                            cout << "4. Kelola Peminjaman" << endl;
+                            cout << "4. Kelola Permintaan Peminjaman" << endl;
+                            cout << "5. Kelola Daftar Peminjam" << endl;
                             cout << "0. Keluar" << endl;
                             cout << "Pilihan: ";
                             cin >> pilihan1;
@@ -112,8 +113,6 @@ int main() {
                                                 cout << "Masukkan ID Buku yang ingin dihapus: ";
                                                 cin >> idb;
                                                 hapusBukuById(LB, idb);
-                                                
-                                                cout << "Buku berhasil dihapus!" << endl;
                                                 break;
                                             }
                                             case 7: {
@@ -128,11 +127,11 @@ int main() {
                                 }
                                 case 3: {
                                     do {
+                                        printListPengunjung(LP);
                                         cout << "=== Daftar Pengunjung ===" << endl;
                                         cout << "1. Tambahkan Pengunjung" << endl;
-                                        cout << "2. Lihat Daftar Pengunjung" << endl;
-                                        cout << "3. Hapus Pengunjung Berdasarkan ID" << endl;
-                                        cout << "4. Hapus Seluruh Pengunjung" << endl;
+                                        cout << "2. Hapus Pengunjung Berdasarkan ID" << endl;
+                                        cout << "3. Hapus Seluruh Pengunjung" << endl;
                                         cout << "0. Kembali" << endl;
                                         cout << "Pilihan: ";
                                         cin >> pilihan3;
@@ -143,14 +142,11 @@ int main() {
                                                 tambahPengunjung(LP, statusPerpustakaan);
                                                 break;
                                             case 2:
-                                                printListPengunjung(LP);
-                                                break;
-                                            case 3:
                                                 cout << "Masukkan ID pengunjung yang akan dihapus: ";
                                                 cin >> idp;
                                                 hapusPengunjungById(LP, idp);
                                                 break;
-                                            case 4:
+                                            case 3:
                                                 resetListPengunjung(LP);
                                                 cout << "List telah di reset" << endl;
                                                 break;
@@ -164,9 +160,6 @@ int main() {
                                         printInfoRequest(LRQ);
                                         cout << "1. Konfirmasi Permintaan" << endl;
                                         cout << "2. Tolak Permintaan" << endl;
-                                        cout << "3. Lihat Daftar Peminjam" << endl;
-                                        cout << "4. Tambah Peminjam" << endl;
-                                        cout << "5. Hapus Peminjam (Pengembalian Buku)" << endl;
                                         cout << "0. Kembali" << endl;
                                         cout << "Pilihan: ";
                                         cin >> pilihan4;
@@ -177,7 +170,7 @@ int main() {
                                                 cout << "Masukkan ID Pengaju: ";
                                                 cin >> idRequest;
                                                 accRequest(LRQ, LPM, LB, idRequest);
-                                                cout << "Permintaan Dikonfirmasi!";
+                                                cout << "Permintaan Dikonfirmasi!" << endl << "Data telah masuk ke daftar peminjam.";
                                                 simpanBukuKeFile(LB, "daftarbuku.txt");
                                                 simpanRequestKeFile(LRQ, "daftarrequest.txt");
                                                 simpanPeminjamKeFile(LPM, "daftarpeminjam.txt");
@@ -192,22 +185,25 @@ int main() {
                                                 simpanRequestKeFile(LRQ, "daftarrequest.txt");
                                                 break; 
                                             }
-                                            case 3: {
-                                                int ketik0;
-                                                printInfoPeminjam(LPM);
-                                                do {
-                                                    cout<< endl << "Ketik 0 untuk kembali."
-                                                        << endl << "Ketik: ";
-                                                    cin >> ketik0;
-                                                } while (ketik0 != 0);
-                                                break;
-                                            }
-                                            case 4: {
+                                            
+                                        }
+                                        cout << endl;
+                                    } while (pilihan4 != 0);
+                                    break;
+                                }
+                                case 5: {
+                                    do {
+                                        printInfoPeminjam(LPM);
+                                        cout << "1. Tambah Peminjam" << endl;
+                                        cout << "2. Hapus Peminjam (Pengembalian Buku)" << endl;
+                                        cout << "0. Kembali" << endl;
+                                        cout << "Pilihan: ";
+                                        cin >> pilihan5;
+                                        cout << endl;
+                                        switch (pilihan5) {
+                                            case 1: {
                                                 string namaPeminjam;
                                                 int idBuku;
-
-                                                printInfoPeminjam(LPM);
-
                                                 cin.ignore();
                                                 cout << "Masukkan Nama Peminjam: ";
                                                 getline(cin, namaPeminjam);
@@ -215,27 +211,19 @@ int main() {
                                                 cout << "Masukkan ID Buku: ";
                                                 cin >> idBuku;
 
-                                                if (pinjamLangsung(LPM, LB, namaPeminjam, idBuku)) {
-                                                    simpanPeminjamKeFile(LPM, "daftarpeminjam.txt");
-                                                    simpanBukuKeFile(LB, "daftarbuku.txt");
-                                                }
-
+                                                pinjamLangsung(LPM, LB, namaPeminjam, idBuku);
                                                 break;
                                             }
-
-                                            case 5: {
-                                                printInfoPeminjam(LPM);
+                                            case 2: {
                                                 int idPeminjam;
                                                 cout << "Masukkan ID Peminjam: ";
                                                 cin >> idPeminjam;
                                                 hapusPeminjamById(LPM, LB, idPeminjam);
-                                                simpanPeminjamKeFile(LPM, "daftarpeminjam.txt");
-                                                simpanBukuKeFile(LB, "daftarbuku.txt");
                                                 break;
                                             }
                                         }
                                         cout << endl;
-                                    } while (pilihan4 != 0);
+                                    } while (pilihan5 != 0);
                                     break;
                                 }
                             }

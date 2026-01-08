@@ -7,8 +7,8 @@ Jane Austen
 Onyx Storm
 Rebecca Yarros
 2025
-7
 1
+3
 To Kill a Mockingbird
 Harper Lee
 1960
@@ -347,7 +347,7 @@ Ayu Utami
 Kisah Tanah Jawa
 Mada Zidan & Bonaventura
 2018
-0
+1
 71
 KKN di Desa Penari
 SimpleMan
@@ -542,7 +542,7 @@ Ilham Fikri
 Penghuni Loteng
 Ananda Putri
 2020
-0
+1
 110
 Makam Terlarang
 Yoga Saputra
@@ -742,49 +742,39 @@ George R.R. Martin
 The Name of the Wind
 Patrick Rothfuss
 2007
-0
+1
 150
 The Wise Mans Fear
 Patrick Rothfuss
 2011
-0
+1
 151
 Mistborn: The Final Empire
 Brandon Sanderson
 2006
-0
+1
 152
 Mistborn: The Well of Ascension
 Brandon Sanderson
 2007
-0
+1
 153
 Mistborn: The Hero of Ages
 Brandon Sanderson
 2008
-0
+1
 154
 Percy Jackson & the Olympians: The Lightning Thief
 Rick Riordan
 2005
-0
+1
 155
 Percy Jackson & the Olympians: Sea of Monsters
 Rick Riordan
 2006
-0
+1
 156
 Percy Jackson & the Olympians: The Titan's Curse
 Rick Riordan
 2007
-0
-157
-Mermaid Man
-Darling
-2009
-0
-158
-Koko
-Cucu
-2025
-0
+1

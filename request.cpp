@@ -36,6 +36,7 @@ void tambahRequest(ListRequest &LRQ, ListBuku &L) {
     infoRequest rq;
     int ketik;
     string x;
+
     rq.idRequest = generateIdRequest(LRQ);
     cout << "Masukkan Nama Pengaju: ";
     cin.ignore();
@@ -43,6 +44,10 @@ void tambahRequest(ListRequest &LRQ, ListBuku &L) {
     cout << "Masukkan Judul Buku: ";
     getline(cin, x);
     addressBuku p = findBukuByNama(L, x);
+    if (p == Nil) {
+        cout << "Buku tidak ditemukan!\n";
+        return;
+    }
     rq.idBuku = p->info.idBuku;
     setWaktuRequest(rq);
     setTanggalRequest(rq);
@@ -60,16 +65,18 @@ void tambahRequest(ListRequest &LRQ, ListBuku &L) {
 }
 
 int generateIdRequest(ListRequest LRQ) {
-    if (LRQ.first == NULL) {
-        return 1;
-    } else {
-        addressRequest p = LRQ.first;
-        while (p->next != NULL) {
-            p = p->next;
+    int maxId = 0;
+    addressRequest p = LRQ.first;
+    while (p != Nil) {
+        if (p->info.idRequest > maxId) {
+            maxId = p->info.idRequest;
         }
-        return p->info.idRequest+1;
+        p = p->next;
     }
+
+    return maxId + 1;
 }
+
 
 addressRequest findRequestById(ListRequest L, int id) {
     addressRequest P = L.first;
@@ -97,7 +104,11 @@ void hapusRequestById(ListRequest &L, int idRequest) {
     while (P != Nil && P->info.idRequest != idRequest) {
         P = P->next;
     }
-    if (P == Nil) return;
+    if (P == Nil) {
+        cout << "Tidak ditemukan" << endl;
+        return;
+    }
+    addressRequest after = P->next;
     if (P == L.first && P == L.last) {
         L.first = Nil;
         L.last = Nil;
@@ -112,9 +123,16 @@ void hapusRequestById(ListRequest &L, int idRequest) {
         P->next->prev = P->prev;
     }
     delete P;
+    P = after;
+    while (P != Nil) {
+        P->info.idRequest -= 1;
+        P = P->next;
+    }
+    cout << "Berhasil dihapus" << endl;
+    simpanRequestKeFile(L, "daftarrequest.txt");
 }
 
-void hapusRequest(ListRequest &L, addressRequest P) {
+void hapusRequestByAdr(ListRequest &L, addressRequest P) {
     if (P == Nil) return;
 
     if (P == L.first && P == L.last) {
@@ -134,6 +152,8 @@ void hapusRequest(ListRequest &L, addressRequest P) {
 }
 
 void printSatuTiket(addressRequest P) {
+    if (P == Nil) return;
+
     const int WIDTH = 24;
 
     cout << "========================================" << endl;
@@ -151,12 +171,15 @@ void printSatuTiket(addressRequest P) {
 
 
 void cekTiket(ListRequest &LRQ, string nama) {
+    int kembali;
     addressRequest rq = findRequestByNama(LRQ, nama);
     if (rq == Nil) {
         cout << "Tiket tidak ditemukan!\n";
         return;
     }
-    printSatuTiket(rq);
+        printSatuTiket(rq);
+        cout << endl;
+
 }
 
 void printInfoRequest(ListRequest L) {

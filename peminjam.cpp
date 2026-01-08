@@ -135,6 +135,9 @@ void hapusPeminjamById(ListPeminjam &L, ListBuku &LB, int idPeminjam) {
     if (bk != Nil) {
         bk->info.tersedia = bk->info.tersedia+1;
     }
+
+    addressPeminjam after = P->next;
+
     if (P == L.first && P == L.last) {
         L.first = Nil;
         L.last = Nil;
@@ -150,7 +153,14 @@ void hapusPeminjamById(ListPeminjam &L, ListBuku &LB, int idPeminjam) {
     }
 
     delete P;
-    cout << "Peminjam dikembalikan dan stok buku diperbarui.\n";
+    P = after;
+    while (P != Nil) {
+        P->info.idPeminjam -= 1;
+        P = P->next;
+    }
+    cout << "Buku dikembalikan dan stok buku diperbarui.\n";
+    simpanPeminjamKeFile(L, "daftarpeminjam.txt");
+    simpanBukuKeFile(LB, "daftarbuku.txt");
 }
 
 bool prosesPeminjaman(
@@ -200,7 +210,7 @@ void accRequest(
     );
 
     if (sukses) {
-        hapusRequest(LRQ, rq);
+        hapusRequestByAdr(LRQ, rq);
         cout << "Request berhasil di-ACC!\n";
     }
 }
@@ -214,6 +224,8 @@ bool pinjamLangsung(
     if (prosesPeminjaman(LPM, LB, namaPeminjam, idBuku)) {
         cout << "Peminjaman langsung berhasil!\n";
         return true;
+        simpanPeminjamKeFile(LPM, "daftarpeminjam.txt");
+        simpanBukuKeFile(LB, "daftarbuku.txt");
     }
     return false;
 }

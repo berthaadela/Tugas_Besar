@@ -30,9 +30,15 @@ void insertLastPengunjung(ListPengunjung &L, addressPengunjung P) {
 }
 
 void tambahPengunjung(ListPengunjung &LP, bool statusPerpustakaan) {
+    int back;
     infoPengunjung pg;
     if (!statusPerpustakaan) {
-        cout << "Perpustakaan masih tutup" << endl;
+        do {
+            cout << "Perpustakaan masih tutup"
+            << endl << "Ketik 0 untuk kembali"
+            << endl << "Ketik: ";
+            cin >> back;
+        } while (back != 0);
     } else {
         pg.idPengunjung = generateIdPengunjung(LP);
         cout << "Masukkan Nama Pengunjung: ";
@@ -109,7 +115,7 @@ void hapusPengunjungById(ListPengunjung &L, int idPengunjung) {
         cout << "Pengunjung dengan ID tersebut tidak ditemukan." << endl;
         return;
     }
-
+    addressPengunjung after = P->next;
     if (P == L.first && P == L.last) {
         L.first = Nil;
         L.last = Nil;
@@ -128,6 +134,11 @@ void hapusPengunjungById(ListPengunjung &L, int idPengunjung) {
     }
 
     delete P;
+    P = after;
+    while (P != Nil) {
+        P->info.idPengunjung -= 1;
+        P = P->next;
+    }
     cout << "Pengunjung berhasil dihapus." << endl;
 
     simpanPengunjungKeFile(L, "daftarpengunjung.txt");

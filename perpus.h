@@ -160,7 +160,7 @@ void printInfoRequest(ListRequest L);
 addressRequest findRequestById(ListRequest L, int id);
 addressRequest findRequestByNama(ListRequest L, string nama);
 void hapusRequestById(ListRequest &L, int idRequest);
-void hapusRequest(ListRequest &L, addressRequest P);
+void hapusRequestByAdr(ListRequest &L, addressRequest P);
 void printSatuTiket(addressRequest P);
 void cekTiket(ListRequest &L, string nama);
 
